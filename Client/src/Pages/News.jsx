@@ -10,6 +10,12 @@ const News = () => {
         <Sidebar/>
         </div>
         <div className="sec2 fixed top-0 left-0 w-auto h-full border-r bg-white space-y-8">
+        <Cardimg
+        Title="Government spends Rs 38 crore in over 6 months on Google ads promoting Modi"
+        Sub="Rs 65 lakh was spent on ‘Modi Ka Parivar’ ads in just six days."
+        Name="Sumedha Mittal"
+        Url="https://media.assettype.com/newslaundry%2F2024-03%2F0e0ee246-e2c8-455f-bda3-459ebdb450cb%2Fmodi_google_ads.jpg"
+        />
         <Cardtxt 
         Title="Not just electoral bonds, BJP dominates all forms of political finance"
         Name="Dhanya Rajendran"
