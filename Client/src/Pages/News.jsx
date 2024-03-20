@@ -63,7 +63,7 @@ const News = () => {
     }
     template();
   },[])
-  len=Dupli.length;
+  len=Dupli.length-1;
   function cards(item){
     
     return(
