@@ -156,7 +156,7 @@
 .tweet-header1 {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .user-avatar1 {
@@ -247,7 +247,8 @@ word-wrap:break-word;
   }
 .sec2{
     left: 30%;
-    overflow-y: auto; 
+    overflow-y: auto;
+    padding-right: 90px; 
 }
 .tweet-container,.tweet-container1{
     background-color: #1c2938;
