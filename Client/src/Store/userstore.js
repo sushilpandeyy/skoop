@@ -3,14 +3,23 @@ import {devtools, persist} from 'zustand/middleware'
 
 const userstore = (set) => ({
     Address: "",
+    Name: "",
+    Email: "",
+    Img: "",
     setAddress: (Adres) => {
         set(() => ({
-            Address: Adres
+            Address: Adres.Address,
+            Name: Adres.Name,
+            Email: Adres.Email,
+            Img: Adres.Img
         }))
     },
     Remove: () => {
         set(() => ({
-            Address: ""
+            Address: "",
+            Name: "",
+            Email: "",
+            Img: ""
         }))
     },
 }) 

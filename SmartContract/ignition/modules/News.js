@@ -8,3 +8,6 @@ module.exports = buildModule("News", (m) => {
 
   return { lock };
 });
+
+
+//0xc3cCab5689A162D1c4C35bBCd15B56E7Ccab7A85
