@@ -3,8 +3,7 @@
     margin: 0;
   }
   body{
-    background-color: rgb(254, 254, 254);
-    text-decoration-color: white;
+    background-color:#15202b;
   }
   .xx{
     z-index: -99;
@@ -59,6 +58,10 @@
     align-items: center;
     gap: 4vh;
   }
+  .sec2{
+    background-color: #15202b;
+  }
+  
 
   .button-random {
     display: inline-block;
@@ -191,11 +194,15 @@
     height: 100%;
     object-fit: cover;
 }
-
+.ff{
+    width: 402px;
+}
 .user-info {
     flex-grow: 1;
 }
-
+.navee{
+    background-color: #15202b;
+}
 .tweet-text {
     margin-bottom: 20px;
 }
@@ -229,8 +236,17 @@ object-fit: cover;
 margin-bottom: 20px;
 word-wrap:break-word;
 }
-  
+  h2{
+    font-weight: 700;
+  }
 .sec2{
-    left: 25%;
+    left: 30%;
     overflow-y: auto; 
+}
+.tweet-container,.tweet-container1{
+    background-color: #1c2938;
+    color: white;
+  }
+.sec2::-webkit-scrollbar {
+    width: 0;
 }

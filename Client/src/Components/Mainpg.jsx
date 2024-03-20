@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React from 'react'
 
 const Mainpg = () => {
@@ -12,7 +13,8 @@ const Mainpg = () => {
     <div class="w-full">
       <div class="buttons-container-random">
         <button class="button-random">
-          <span >Join us</span>
+          
+          <span ><Link to="/login">Join us</Link></span>
         </button>
       </div>
     </div>
