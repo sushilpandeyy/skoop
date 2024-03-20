@@ -9,6 +9,18 @@
     height: 100vh;
     overflow: hidden;
   }
+  .dark{
+    background-color: rgb(7 10 15 / 1);
+    background-image: url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&w=2048&q=75"), url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&w=1080&q=75");
+    background-repeat: no-repeat;
+    background-position: left,right;
+  }
+  .dark h3,p,label{
+     color: white;
+  }
+  .login{
+    background-color: rgb(7 10 15 / 1);
+  }
   .nn{
     position: relative; 
     
