@@ -16,7 +16,7 @@ function Animated() {
       controls = new OrbitControls(camera, renderer.domElement);
       document.body.appendChild(renderer.domElement);
       const geometry = new THREE.TorusGeometry(2, 1, 25, 100);
-      const material = new THREE.MeshBasicMaterial({ color: 0x3d5664, wireframe: true });
+      const material = new THREE.MeshBasicMaterial({ color: 0x4a565e, wireframe: true });
       const torus = new THREE.Mesh(geometry, material);
       scene.add(torus);
       const animate = () => {

@@ -22,6 +22,89 @@
   .dark h3,p,label{
      color: white;
   }
+ 
+  .container-random {
+    z-index: 50;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&w=2048&q=75"), url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&w=1080&q=75");
+    background-repeat: no-repeat;
+    background-position: left,right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title-random {
+    color: #ffffff;
+    text-align: center;
+    font-size: 3.5rem; 
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .description-random {
+    color: rgba(255, 255, 255, 0.48);
+    text-align: center;
+    font-size: 1.5rem; /* Adjust as needed */
+    margin-bottom: 2rem;
+  }
+
+  .buttons-container-random {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+  }
+
+  .button-random {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px; /* Large value for roundness */
+    height: 7vh;
+    font-size: 0.8125rem; /* Adjust as needed */
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3887FD;
+    transition: background-color 0.2s, opacity 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .button-random:hover {
+    background-color: rgba(56, 135, 253, 0.6);
+  }
+
+  .button-random:hover .overlay-random {
+    opacity: 1;
+  }
+
+  .overlay-random {
+    position: absolute;
+    bottom: 0;
+    left: 1.125rem;
+    width: calc(100% - 2.25rem);
+    height: 1px;
+    background: linear-gradient(to right, #34D399 0%, #34D399 90%, #34D399 0%);
+    transition: opacity 0.5s;
+    opacity: 0;
+  }
+
+  .secondary-button-random {
+    background-color: transparent;
+    opacity: 0.8;
+    width: 12vh;
+    border: 2px solid grey;
+    /* margin-top: 0.5rem; Adjust as needed */
+    transition: opacity 0.2s;
+  }
+
+  .secondary-button-random:hover {
+    opacity: 1;
+  }
   .login{
     background-color: rgb(7 10 15 / 1);
   }
