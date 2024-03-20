@@ -68,7 +68,7 @@ const Login = () => {
         Img: ''
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
       e.preventDefault();
         useUserstore.setState({
             Address: account,
@@ -77,6 +77,14 @@ const Login = () => {
             Email: formData.Email,
             Img: formData.Img || "https://randomuser.me/api/portraits/women/79.jpg"
         });
+
+        const transaction = await state.Contract.adduser(formData.Name,formData.Img);
+        await transaction.wait();
+        window.alert('User Added');
+        
+        
+
+        
         navigate('/news');
     };
 
