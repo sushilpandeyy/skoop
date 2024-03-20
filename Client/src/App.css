@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
   }
+  body{
+    background-color: rgb(254, 254, 254);
+    text-decoration-color: white;
+  }
   .xx{
     z-index: -99;
     position: fixed;
@@ -124,10 +128,7 @@
     background-repeat: no-repeat;
     background-position: left,right;
   }
-  body{
-    background-color: rgb(7 10 15 / 1);
-    
-  }
+
   .p
   {
     background-color: #3d5664;
