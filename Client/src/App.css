@@ -149,6 +149,11 @@
     display: flex;
     justify-content: center;
     align-items: center;text-align: center;
+    background-image: url('https://media.istockphoto.com/id/1334290795/vector/geometric-cube-holographic-modern-abstract-background.jpg?s=612x612&w=0&k=20&c=vxq31R8hfkpQY_QLCKU6D1H6AyfgDuxTPbw0pRioDn8=');
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
   }
   html{
     -webkit-tap-highlight-color: transparent;
@@ -173,11 +178,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url('https://media.istockphoto.com/id/1366314114/vector/technology-background-with-connected-dots-on-3d-wave-landscape-data-science-particles.jpg?s=612x612&w=0&k=20&c=HdRtRp-McAsN7sNo2tK7gIiMd84y0WrxOlCwvqdMtn0=');
+    background-blend-mode: color;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .lasth{
     width: 40%;
       height: 38%;
-      color: rgb(225, 225, 225);
+      color: rgb(225 225 225 / 78%);
       font-size: 50px;
       line-height: 62px;
       font-family: sans-serif;
