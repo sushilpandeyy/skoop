@@ -5,6 +5,8 @@ import Mainpg from '../Components/Mainpg'
 import Maintwo from '../Components/Maintwo';
 import Mainthree from '../Components/Mainthree';
 import Footer from '../Components/Footer';
+import Hed from '../Components/Hed';
+import Lastc from '../Components/Lastc';
 
 
 const Homepage = () => {
@@ -15,14 +17,12 @@ const Homepage = () => {
         <Animated />
     </div>
 <div className="nn">
-    <div className="gg">
+    <div className="gg ">
         <Mainpg/>
         <Mainthree/>
         <Maintwo/>
-        <div className="g">
-        <h1>Welcome to My Web App</h1>
-        <p>This is the landing page</p>
-        </div>
+        <Lastc/>
+        <Hed/>
         <Footer/>
     </div>
 </div>

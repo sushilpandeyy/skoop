@@ -26,7 +26,7 @@ const Mainthree = () => {
                         </g>
                     </svg>
                     <h3>Built for trust</h3>
-                    <p>Unlike Facebook and Google, newsrooms can trust Civil. It's transparently owned and operated by an engaged community of people who care about journalism, not an all-powerful corporation with opaque motives. Newsrooms on Civil are committed and accountable to producing ethical journalism.</p>
+                    <p>Unlike Facebook and Google, newsrooms can trust Skoop. It's transparently owned and operated by an engaged community of people who care about journalism, not an all-powerful corporation with opaque motives. Newsrooms on Skoop are committed and accountable to producing ethical journalism.</p>
                 </div>
                 <div class="flex-4-item">
                     <svg class="icon" viewBox="0 0 81 81" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@ const Mainthree = () => {
                         </g>
                     </svg>
                     <h3>Built for journalism</h3>
-                    <p>Anyone can start a newsroom or add their existing publication, provided they honor Civil's ethical journalism standards. There's no central authority or middleman present on Civil, it's 100% community-owned and community-governed.</p>
+                    <p>Anyone can start a newsroom or add their existing publication, provided they honor Skoop's ethical journalism standards. There's no central authority or middleman present on Skoop, it's 100% community-owned and community-governed.</p>
                 </div>
                 <div class="flex-4-item">
                     <svg class="icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ const Mainthree = () => {
                         </g>
                     </svg>
                     <h3>Built for community</h3>
-                    <p>Newsrooms gain access to membership benefits from industry leaders like the Associated Press, Alley Interactive and Old Town Media. Civil's community-owned model means that encourages greater cross-newsroom collaboration in tackling the toughest sustainability challenges head on.</p>
+                    <p>Newsrooms gain access to membership benefits from industry leaders like the Associated Press, Alley Interactive and Old Town Media. Skoop's community-owned model means that encourages greater cross-newsroom collaboration in tackling the toughest sustainability challenges head on.</p>
                 </div>
                 <div class="flex-4-item">
                     <svg class="icon" viewBox="0 0 60 61" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ const Mainthree = () => {
                         </g>
                     </svg>
                     <h3>Built for transparency</h3>
-                    <p>Civil is built with transparency in mind. Its decentralized newsrooms are tracked through a blockchain-based system, ensuring that every piece of content published on Civil is verified and accountable.</p>
+                    <p>Skoop is built with transparency in mind. Its decentralized newsrooms are tracked through a blockchain-based system, ensuring that every piece of content published on Skoop is verified and accountable.</p>
                 </div>
             </div>
         </div>
