@@ -126,11 +126,11 @@ const Add = () => {
               required
               className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
             >
-              <option value="">Select Category</option>
-              <option value="National">National</option>
-              <option value="Political">Political</option>
-              <option value="Business">Business</option>
-              <option value="Sports">Sports</option>
+              <option className="yt" value="">Select Category</option>
+              <option className="yt" value="National">National</option>
+              <option className="yt" value="Political">Political</option>
+              <option className="yt" value="Business">Business</option>
+              <option className="yt" value="Sports">Sports</option>
             </select>
           </div>
           <div>
