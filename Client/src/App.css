@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200&display=swap');
   body{
     background-color:#15202b;
   }
@@ -142,10 +143,54 @@
   .kk{
     background-color: rgb(7 10 15 / 1);
   }
+  .hed{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;text-align: center;
+  }
+  html{
+    -webkit-tap-highlight-color: transparent;
+  }
+  .hed1{
+    font-size: 50px;
+    font-family: "Spectral";
+    font-weight: 100;
+    color: rgb(194, 191, 191);
+    font-style: normal;
 
+  }
   .p
   {
     background-color: #3d5664;
+  }
+  .lastcc{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .lasth{
+    width: 40%;
+      height: 38%;
+      color: rgb(225, 225, 225);
+      font-size: 50px;
+      line-height: 62px;
+      font-family: sans-serif;
+
+  }
+  .lastte{
+    width: 50%;
+    color: rgb(155, 155, 155);
+    font-size: 20px;
+    height: 19%;
+  }
+  .lastbt{
+    height: 10%;
   }
   .tweet-container1 {
     width: 600px;

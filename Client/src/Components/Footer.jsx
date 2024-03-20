@@ -24,13 +24,13 @@ const Footer = () => {
 
         
        
-            <footer className="pt-10">
+            <footer className="pt-10 kk">
                 <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                     <div className="justify-between sm:flex">
                         <div className="space-y-6 mx-auto">
                             <img src="https://www.floatui.com/logo.svg" className="w-32 mx-auto" />
                             <p className="max-w-md">
-                                Nulla auctor metus vitae lectus iaculis, vel euismod massa efficitur.
+                            Dectralizing News With Public For Public
                             </p>
                         </div>
                         <div className="mt-6">
