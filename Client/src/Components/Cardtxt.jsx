@@ -1,18 +1,17 @@
 import React from 'react'
 
-export const cardtxt = (props) => {
+const Cardtxt = (props) => {
   return (
     <div class="tweet-container1">
-        
         <div class="summary1">
-            <h2>
+            <h2 className='text-xl	'>
               {props.Title}
             </h2>
         </div>
         <div class="tweet-header1">
             <div class="user-info1">
-                By: 
-                <div class="user-name">{props.Name}</div>
+                By:
+                <span class="user-name"> {props.Name}</span>
             </div>
         </div>
         <div class="tweet-text1">
@@ -23,3 +22,5 @@ export const cardtxt = (props) => {
     </div>
   )
 }
+
+export default Cardtxt
