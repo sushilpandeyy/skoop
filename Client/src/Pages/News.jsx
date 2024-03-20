@@ -14,7 +14,7 @@ const News = () => {
     Contract:null
   })
   const [acoount, setAccount] = useState('not connected');
-  const [news,setnews] = useState({name:'',message:''});
+  const [newss,setnewss] = useState({});
   const [reporter,setReporter] = useState({name:'',email:'',phone:''});
 
   useEffect(()=>{
@@ -56,10 +56,8 @@ const News = () => {
       
      //NewsList is the news array
       const NewsList = await contract.getLatestNews();
-      console.log(NewsList);
-      
-      
-
+      const ab = {NewsList}
+      setnewss(ab);
       }
       catch(err)
       {
@@ -72,16 +70,21 @@ const News = () => {
     template();
   },[])
   
-  
+  function cards(item){
+    return(
+      <Cardimg
+        Title={item[0]}
+        Sub={item[2]}
+        Name={item[3]}
+        Url={item[4]}
+      />
+    )
+  }
 
-
+const s = () => {
   return (
-    <div className='flex justify-start content-start'>
-      <div className="sec1 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
-        <Sidebar/>
-        </div>
-        <div className="sec2 fixed top-0 left-0 w-auto h-full border-r bg-white space-y-8">
-        <Cardimg
+    <>
+    <Cardimg
         Title="Government spends Rs 38 crore in over 6 months on Google ads promoting Modi"
         Sub="Rs 65 lakh was spent on ‘Modi Ka Parivar’ ads in just six days."
         Name="Sumedha Mittal"
@@ -98,6 +101,20 @@ const News = () => {
         Name="Dhanya Rajendran"
         Url="https://media.assettype.com/newslaundry%2F2023-10%2Fd2b739b1-3104-4fdb-8096-64a9ee13058d%2FMAHUA_.jpg"
         />
+        </>
+  )
+}
+
+  return (
+    <div className='flex justify-start content-start'>
+      <div className="sec1 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
+        <Sidebar
+        state={state}
+        Account={acoount}
+        />
+        </div>
+        <div className="sec2 fixed top-0 left-0 w-auto h-full border-r bg-white space-y-8">
+          {(newss.NewsList)?newss.NewsList.map(cards):"Loading"}
         </div>
     </div>
   )

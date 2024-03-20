@@ -81,8 +81,6 @@ const Login = () => {
         const transaction = await state.Contract.adduser(formData.Name,formData.Img);
         await transaction.wait();
         window.alert('User Added');
-        
-        
 
         
         navigate('/news');
