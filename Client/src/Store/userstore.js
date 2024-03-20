@@ -6,6 +6,7 @@ const userstore = (set) => ({
     Name: "",
     Email: "",
     Img: "",
+    Type: "",
     setAddress: (Adres) => {
         set(() => ({
             Address: Adres.Address,
