@@ -113,7 +113,7 @@ const s = () => {
         Account={acoount}
         />
         </div>
-        <div className="sec2 fixed top-0 left-0 w-auto h-full border-r bg-white space-y-8">
+        <div className="sec2 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
           {(newss.NewsList)?newss.NewsList.map(cards):"Loading"}
         </div>
     </div>
