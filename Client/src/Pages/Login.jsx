@@ -15,8 +15,6 @@ const Login = () => {
   const [account, setAccount] = useState(null);
   const [walletConnected, setWalletConnected] = useState(false);
   const [type, settype] = useState("Reader");
-  
-
   useEffect(() => {
     const connectWallet = () => {
       try {

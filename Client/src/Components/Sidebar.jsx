@@ -1,5 +1,18 @@
+import useUserstore from "../Store/userstore";
 const Sidebar = () => {
-
+    const {Address,
+    Name,
+    Email,
+    Img,
+    Type,} = useUserstore(
+        (state) => ({
+            Address: state.Address,
+    Name: state.Name,
+    Email: state.Email,
+    Img: state.Img,
+    Type: state.Type,
+        })
+    )
     const navigation = [
         {
             href: '',
@@ -86,14 +99,14 @@ const Sidebar = () => {
                             </ul>
                             <div className="py-4 px-4 border-t">
                                 <div className="flex items-center gap-x-4">
-                                    <img src="https://randomuser.me/api/portraits/women/79.jpg" className="w-12 h-12 rounded-full" />
+                                    <img src={Img || "https://randomuser.me/api/portraits/women/79.jpg"} className="w-12 h-12 rounded-full" />
                                     <div>
-                                        <span className="block text-gray-700 text-sm font-semibold">Alivika tony</span>
+                                        <span className="block text-gray-700 text-sm font-semibold">{Name || "Swati"}</span>
                                         <a
                                             href=""
                                             className="block mt-px text-gray-600 hover:text-indigo-600 text-xs"
                                         >
-                                            View profile
+                                            {Address || "Login"}
                                         </a>
                                     </div>
                                 </div>
