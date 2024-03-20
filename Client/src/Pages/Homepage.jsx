@@ -18,10 +18,6 @@ const Homepage = () => {
         <h1>Welcome to My Web App</h1>
         <p>This is the landing page</p>
         </div>
-        <div className="g">
-        <h1>Welcome to My Web App</h1>
-        <p>This is the landing page</p>
-        </div>
     </div>
 </div>
 

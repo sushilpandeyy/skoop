@@ -5,8 +5,8 @@ import {Cardtxt, Cardimg} from '../Components/Cardimg.jsx'
 
 const News = () => {
   return (
-    <div className='flex justify-start content-start '>
-      <div className="sec1 fixed top-0 left-0 w-auto h-full border-r bg-white space-y-8">
+    <div className='flex justify-start content-start'>
+      <div className="sec1 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
         <Sidebar/>
         </div>
         <div className="sec2 fixed top-0 left-0 w-auto h-full border-r bg-white space-y-8">

@@ -26,8 +26,8 @@ const Cardtxt = (props) => {
 const Cardimg = (props) => {
   return (
     <div class="tweet-container">
-        <div class="summury">
-            <h2>
+        <div class="summary">
+            <h2 className='text-xl'>
                 {props.Title}
             </h2>
         </div>

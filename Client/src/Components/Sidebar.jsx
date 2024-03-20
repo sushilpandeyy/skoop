@@ -51,7 +51,7 @@ const Sidebar = () => {
     return (
         <>
             <nav
-                className="fixed top-0 left-0 w-1/5 h-full border-r bg-white space-y-8 sm:w-80">
+                className="fixed top-0 left-0 w-1/5 h-full border-r bg-white space-y-8 sm:w-80 navee">
                 <div className="flex flex-col h-full">
                     <div className='h-20 flex items-center px-8'>
                         <a href='' className='flex-none'>
