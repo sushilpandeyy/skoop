@@ -16,7 +16,6 @@ const News = () => {
         Name="Sumedha Mittal"
         Url="https://media.assettype.com/newslaundry%2F2024-03%2F0e0ee246-e2c8-455f-bda3-459ebdb450cb%2Fmodi_google_ads.jpg"
         />
-        <div className="sec2 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
         <Cardtxt 
         Title="Not just electoral bonds, BJP dominates all forms of political finance"
         Name="Dhanya Rajendran"
