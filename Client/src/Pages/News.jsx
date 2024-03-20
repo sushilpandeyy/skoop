@@ -5,9 +5,8 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import abi from '../abi/News.json';
 
-
-
 const News = () => {
+  let len=0;
   const [state, setState] = useState({
     provider:null,
     signer:null,
@@ -16,7 +15,6 @@ const News = () => {
   const [acoount, setAccount] = useState('not connected');
   const [newss,setnewss] = useState({});
   const [reporter,setReporter] = useState({name:'',email:'',phone:''});
-
   useEffect(()=>{
     const template = async () => {
        const contractAddress = "0xc3cCab5689A162D1c4C35bBCd15B56E7Ccab7A85";
@@ -27,7 +25,6 @@ const News = () => {
        //2. Metamask consist of infura api which helps to connect to the blockchain
 
       try{
-
         let {ethereum} = window;
         const account = await ethereum.request({
          method:'eth_requestAccounts'
@@ -42,26 +39,21 @@ const News = () => {
       const signer = provider.getSigner(); // Write the Blockchain
 
 
-
       const contract = new ethers.Contract(
         contractAddress,
         constractABI,
         signer
       );
 
-
-     
     
       setState({ provider, signer, Contract: contract }); // Update the state with the contract instance
-      
-     //NewsList is the news array
+    
       const NewsList = await contract.getLatestNews();
       const ab = {NewsList}
       setnewss(ab);
       }
       catch(err)
       {
-        
         console.log(err);
       }
 
@@ -69,15 +61,22 @@ const News = () => {
     }
     template();
   },[])
-  
+  const re = () => {
+    len=len-1;
+  }
   function cards(item){
     return(
+      <>
       <Cardimg
+        Key={len--}
         Title={item[0]}
         Sub={item[2]}
         Name={item[3]}
         Url={item[4]}
       />
+      {re}
+      </>
+      
     )
   }
 
@@ -104,17 +103,16 @@ const s = () => {
         </>
   )
 }
-
   return (
     <div className='flex justify-start content-start'>
       <div className="sec1 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
         <Sidebar
-        state={state}
+        State={state}
         Account={acoount}
         />
         </div>
         <div className="sec2 fixed top-0 left-0 w-auto h-full border-r bg-white space-y-8">
-          {(newss.NewsList)?newss.NewsList.map(cards):"Loading"}
+          {(newss.NewsList)?newss.NewsList.slice().reverse().map(cards):"Loading"}
         </div>
     </div>
   )
