@@ -2,7 +2,7 @@ import React from 'react'
 
 const Maintwo = () => {
   return (
-    <div class="main2 k">
+    <div class="main2 kk">
     <div class="main2-1">
       <h2>
         We are living in a time <br />

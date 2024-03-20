@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mainthree = () => {
   return (
-    <div class="main3 kk">
+    <div class="main3 k">
         <div class="grid-col-lg">
             <h2>Skoop is a platform unlike any other.</h2>
             <div class="flex-4">
