@@ -3,8 +3,66 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import abi from '../abi/News.json';
 import useUserstore from '../Store/userstore.js';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [state, setState] = useState({
+    provider: null,
+    signer: null,
+    Contract: null
+  });
+  const [account, setAccount] = useState(null);
+  const [walletConnected, setWalletConnected] = useState(false);
+  const [type, settype] = useState("Reader");
+  
+
+  useEffect(() => {
+    const connectWallet = () => {
+      try {
+        let { ethereum } = window;
+        if (!ethereum) {
+          throw new Error('MetaMask not found');
+        }
+
+        if (ethereum.selectedAddress) {
+          setAccount(ethereum.selectedAddress);
+          setWalletConnected(true);
+        } else {
+          setWalletConnected(false);
+        }
+
+        ethereum.on('accountsChanged', (accounts) => {
+          if (accounts.length > 0) {
+            setAccount(accounts[0]);
+            setWalletConnected(true);
+          } else {
+            setAccount(null);
+            setWalletConnected(false);
+          }
+        });
+
+        const contractAddress = "0xc3cCab5689A162D1c4C35bBCd15B56E7Ccab7A85";
+        const contractABI = abi.abi;
+
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+
+        const contract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+
+        setState({ provider, signer, Contract: contract }); 
+         
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    connectWallet();
+  }, []);
 
     const [formData, setFormData] = useState({
         Name: '',
@@ -13,13 +71,15 @@ const Login = () => {
     });
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+      e.preventDefault();
         useUserstore.setState({
             Address: account,
+            Type: type,
             Name: formData.Name,
             Email: formData.Email,
-            Img: formData.Img
+            Img: formData.Img || "https://randomuser.me/api/portraits/women/79.jpg"
         });
+        navigate('/news');
     };
 
     const handleChange = (e) => {
@@ -29,64 +89,11 @@ const Login = () => {
             [name]: value
         }));
     };
-    const [state, setState] = useState({
-        provider: null,
-        signer: null,
-        Contract: null
-      });
-      const [account, setAccount] = useState(null);
-      const [walletConnected, setWalletConnected] = useState(false);
     
-      useEffect(() => {
-        const connectWallet = async () => {
-          try {
-            let { ethereum } = window;
-            if (!ethereum) {
-              throw new Error('MetaMask not found');
-            }
-    
-            if (ethereum.selectedAddress) {
-              setAccount(ethereum.selectedAddress);
-              setWalletConnected(true);
-            } else {
-              setWalletConnected(false);
-            }
-    
-            ethereum.on('accountsChanged', (accounts) => {
-              if (accounts.length > 0) {
-                setAccount(accounts[0]);
-                setWalletConnected(true);
-              } else {
-                setAccount(null);
-                setWalletConnected(false);
-              }
-            });
-    
-            const contractAddress = "0xc3cCab5689A162D1c4C35bBCd15B56E7Ccab7A85";
-            const contractABI = abi.abi;
-    
-            const provider = new ethers.providers.Web3Provider(ethereum);
-            const signer = provider.getSigner();
-    
-            const contract = new ethers.Contract(
-              contractAddress,
-              contractABI,
-              signer
-            );
-    
-            setState({ provider, signer, Contract: contract }); 
-            console.log(contract);
-          } catch (error) {
-            console.log(error);
-          }
-        };
-    
-        connectWallet();
-      }, []);
 
       const handlewallet = () => {
         window.ethereum.request({ method: 'eth_requestAccounts' })
-
+        
       }
   return (
     
@@ -113,24 +120,22 @@ const Login = () => {
                 />
             </div>
             <div>
-                <label className="font-medium">Email</label>
+                <label className="font-medium">Email (Optional)</label>
                 <input
                     type="email"
                     name="Email"
                     value={formData.Email}
                     onChange={handleChange}
-                    required
                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
             </div>
             <div>
-                <label className="font-medium">Image URL</label>
+                <label className="font-medium">Image URL (Optional)</label>
                 <input
-                    type="text"
+                    type="url"
                     name="Img"
                     value={formData.Img}
                     onChange={handleChange}
-                    required
                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
             </div>
