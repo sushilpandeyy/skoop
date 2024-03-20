@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import { ethers } from 'ethers';
+import abi from '../abi/News.json';
+
 
 const Add = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +12,64 @@ const Add = () => {
     description: '',
     category: ''
   });
+  const [state, setState] = useState({
+    provider:null,
+    signer:null,
+    Contract:null
+  })
+  const [acoount, setAccount] = useState('not connected');
+
+
+  useEffect(()=>{
+    const template = async () => {
+       const contractAddress = "0xc3cCab5689A162D1c4C35bBCd15B56E7Ccab7A85";
+       const constractABI = abi.abi;
+
+       //Metamask part
+       //1. In order to do transactions on goerli testnet
+       //2. Metamask consist of infura api which helps to connect to the blockchain
+
+      try{
+
+        let {ethereum} = window;
+        const account = await ethereum.request({
+         method:'eth_requestAccounts'
+       });
+      // window.location.reload()
+      window.ethereum.on('accountsChanged',()=>{
+        window.location.reload();
+      });
+      setAccount(account[0]);
+
+      const provider = new ethers.providers.Web3Provider(ethereum); // Read the Blockchain
+      const signer = provider.getSigner(); // Write the Blockchain
+
+
+
+      const contract = new ethers.Contract(
+        contractAddress,
+        constractABI,
+        signer
+      );
+
+
+     
+    
+      setState({ provider, signer, Contract: contract }); // Update the state with the contract instance
+      
+      
+
+      }
+      catch(err)
+      {
+        
+        console.log(err);
+      }
+
+
+    }
+    template();
+  },[])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,10 +79,20 @@ const Add = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Here you can access the form data from the formData state
-    console.log(formData);
+    const { newsTitle, summary, imageUrl, videoUrl, description, category } = formData;
+    const transactions = await state.Contract.addNews(newsTitle,description,summary,category,imageUrl,videoUrl);
+    window.alert('News Added');
+    setFormData({
+        newsTitle: '',
+        summary: '',
+        imageUrl: '',
+        videoUrl: '',
+        description: '',
+        category: ''
+      })
     // You can do whatever you want with the form data here, such as sending it to a server
   };
 
