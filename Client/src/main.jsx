@@ -16,6 +16,9 @@ const router= createBrowserRouter(
     <Route path='/' element={<App/>}>
       <Route path='' element={<Homepage/>}/>
       <Route path='news' element={<News/>}/>
+      <Route path='news/t/:id' element={<Oppurtunity/>}/>
+      <Route path='news/i/:id' element={<Oppurtunity/>}/>
+      <Route path='news/v/:id' element={<Oppurtunity/>}/>
     </Route>
   )
 )
