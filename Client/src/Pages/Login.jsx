@@ -2,9 +2,32 @@ import '../App.css';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import abi from '../abi/News.json';
+import useUserstore from '../Store/userstore.js';
 
 const Login = () => {
 
+    const [formData, setFormData] = useState({
+        Name: '',
+        Email: '',
+        Img: ''
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        useUserstore.setState({
+            Name: formData.Name,
+            Email: formData.Email,
+            Img: formData.Img
+        });
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value
+        }));
+    };
     const [state, setState] = useState({
         provider: null,
         signer: null,
@@ -21,7 +44,6 @@ const Login = () => {
               throw new Error('MetaMask not found');
             }
     
-            // Check if the wallet is connected
             if (ethereum.selectedAddress) {
               setAccount(ethereum.selectedAddress);
               setWalletConnected(true);
@@ -42,8 +64,8 @@ const Login = () => {
             const contractAddress = "0xc3cCab5689A162D1c4C35bBCd15B56E7Ccab7A85";
             const contractABI = abi.abi;
     
-            const provider = new ethers.providers.Web3Provider(ethereum); // Read the Blockchain
-            const signer = provider.getSigner(); // Write the Blockchain
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
     
             const contract = new ethers.Contract(
               contractAddress,
@@ -51,7 +73,7 @@ const Login = () => {
               signer
             );
     
-            setState({ provider, signer, Contract: contract }); // Update the state with the contract instance
+            setState({ provider, signer, Contract: contract }); 
             console.log(contract);
           } catch (error) {
             console.log(error);
@@ -73,46 +95,47 @@ const Login = () => {
                       </div>
                   </div>
                   <div className="bg-white shadow p-4 py-6 sm:p-6 sm:rounded-lg login">
-                      <form
-                          onSubmit={(e) => e.preventDefault()}
-                          className="space-y-5"
-  
-                      >
-                          <div>
-                              <label className="font-medium">
-                                  Name
-                              </label>
-                              <input
-                                  type="text"
-                                  required
-                                  className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                              />
-                          </div>
-                          <div>
-                              <label className="font-medium">
-                                  Email
-                              </label>
-                              <input
-                                  type="email"
-                                  required
-                                  className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                              />
-                          </div>
-                          <div>
-                              <label className="font-medium">
-                                  Image URL
-                              </label>
-                              <input
-                                  type="string"
-                                  required
-                                  className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                              />
-                          </div>
-                          <button
-                              className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
-                          >
-                              Create account
-                          </button>
+                  <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+                <label className="font-medium">Name</label>
+                <input
+                    type="text"
+                    name="Name"
+                    value={formData.Name}
+                    onChange={handleChange}
+                    required
+                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                />
+            </div>
+            <div>
+                <label className="font-medium">Email</label>
+                <input
+                    type="email"
+                    name="Email"
+                    value={formData.Email}
+                    onChange={handleChange}
+                    required
+                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                />
+            </div>
+            <div>
+                <label className="font-medium">Image URL</label>
+                <input
+                    type="text"
+                    name="Img"
+                    value={formData.Img}
+                    onChange={handleChange}
+                    required
+                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                />
+            </div>
+            <button
+                type="submit"
+                className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+            >
+                Create account
+            </button>
+        
                           {walletConnected ? (
         <p>Connected Wallet: {account}</p>
       ) : (
