@@ -48,7 +48,7 @@
   .description-random {
     color: rgba(255, 255, 255, 0.48);
     text-align: center;
-    font-size: 1.5rem; /* Adjust as needed */
+    font-size: 1.25rem; 
     margin-bottom: 2rem;
   }
 
@@ -63,19 +63,20 @@
   .button-random {
     display: inline-block;
     padding: 0.25rem 1rem;
-    border-radius: 9999px; /* Large value for roundness */
+    border-radius: 9999px; 
     height: 7vh;
-    font-size: 0.8125rem; /* Adjust as needed */
+    font-size: 0.8125rem;
     font-weight: bold;
     color: #ffffff;
-    background-color: #3887FD;
+    background-color:rgba(56, 135, 253, 0.6);
     transition: background-color 0.2s, opacity 0.2s;
     position: relative;
     overflow: hidden;
-  }
+    width: 20vh;
+}
 
-  .button-random:hover {
-    background-color: rgba(56, 135, 253, 0.6);
+.button-random:hover {
+      background-color: #3887FD;
   }
 
   .button-random:hover .overlay-random {
@@ -107,16 +108,16 @@
   }
   .login{
     background-color: rgb(7 10 15 / 1);
-  }
-  .nn{
+}
+.nn{
     position: relative; 
     
   }
   .gg{
     z-index: 100;
     position: absolute;
-  }
-  .g{
+}
+.g{
     color: aliceblue;
     height: 100vh;
     width: 100vw;
@@ -124,6 +125,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(7 10 15 / 1);
     background-image: url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&w=2048&q=75"), url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&w=1080&q=75");
     background-repeat: no-repeat;
     background-position: left,right;
@@ -133,4 +135,45 @@
   {
     background-color: #3d5664;
   }
+  .tweet-container1 {
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1c2938;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tweet-header1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-avatar1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.user-avatar1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info1 {
+    flex-grow: 1;
+}
+
+.tweet-text1{
+    margin-bottom: 20px;
+}
+
+.tweet-text1 {
+margin-bottom: 20px;
+word-wrap:break-word;
+}
   

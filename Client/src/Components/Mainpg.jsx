@@ -12,10 +12,8 @@ const Mainpg = () => {
     <div class="w-full">
       <div class="buttons-container-random">
         <button class="button-random">
-          {/* <!-- <div class="overlay-random"></div> --> */}
-          <span>Join us</span>
+          <span >Join us</span>
         </button>
-        <button class="button-random secondary-button-random">Other</button>
       </div>
     </div>
   </div>
