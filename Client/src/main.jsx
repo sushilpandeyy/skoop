@@ -11,10 +11,10 @@ import {
 import Homepage from './Pages/Homepage.jsx'
 import News from './Pages/News.jsx';
 import Textnews from './Pages/Textnews.jsx';
-import Imagenews from './Pages/Imagenews.jsx';
 import Videonews from './Pages/Videonews.jsx';
 import Login from './Pages/Login.jsx';
 import Add from './Pages/Add.jsx';
+import Reporter from './Pages/Reporter.jsx';
 
 const router= createBrowserRouter(
   createRoutesFromElements(
@@ -22,9 +22,9 @@ const router= createBrowserRouter(
       <Route path='' element={<Homepage/>}/>
       <Route path='news' element={<News/>}/>
       <Route path='news/t/:id' element={<Textnews/>}/>
-      <Route path='news/i/:id' element={<Imagenews/>}/>
       <Route path='news/v/:id' element={<Videonews/>}/>
       <Route path='login' element={<Login/>}/>
+      <Route path='Reporter' element={<Reporter/>}/>
       <Route path='add' element={<Add/>}/>
     </Route>
   )
