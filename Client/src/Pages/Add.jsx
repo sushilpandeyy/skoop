@@ -42,8 +42,28 @@ const Add = () => {
               className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
             />
           </div>
-          {/* Similarly, handle other input fields using state variables and onChange event */}
-          {/* Omitted for brevity */}
+          <div>
+                          <label className="font-medium">News Title *</label>
+                          <input type="string" required className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"/>
+                      </div>
+                      <div>
+                        <label class="font-medium">Summary *</label>
+                        <input type="text" required maxlength="300" class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"/>
+                      </div>
+                      <div>
+                          <label className="font-medium">Image URL</label>
+                          <input type="string" required className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"/>
+                      </div>
+                      <div>
+                          <label className="font-medium">Video URL </label>
+                          <input type="string" required className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"/>
+                      </div>
+                      <div>
+                       <label class="font-medium">Description *</label>
+                         <textarea required rows="4" class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
+                      </div>
+
+                      
           <button
             type="submit"
             className="w-full mt-4 px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
