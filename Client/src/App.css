@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  .xx{
+    z-index: -99;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .nn{
+    position: relative; 
+    
+  }
+  .gg{
+    z-index: 100;
+    position: absolute;
+  }
+  .g{
+    color: aliceblue;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&w=2048&q=75"), url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&w=1080&q=75");
+    background-repeat: no-repeat;
+    background-position: left,right;
+  }
+  body{
+    background-color: rgb(7 10 15 / 1);
+    
+  }
+  .p
+  {
+    background-color: #3d5664;
+  }
+  
