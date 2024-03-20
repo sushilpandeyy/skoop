@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const Cardtxt = (props) => {
     return (
       <div class="tweet-container1">
           <div class="summary1">
-              <h2 className='text-xl	'>
-                {props.Title}
+              <h2 className='text-xl'>
+              {props.Title} 
               </h2>
           </div>
           <div class="tweet-header1">
@@ -17,8 +18,6 @@ const Cardtxt = (props) => {
           <div class="tweet-text1">
               {props.Sub}
           </div>
-          
-          
       </div>
     )
   }
@@ -26,6 +25,7 @@ const Cardtxt = (props) => {
 const Cardimg = (props) => {
   return (
     <div class="tweet-container">
+        <a href={"news/t/"+props.Len}>
         <div class="summary">
             <h2 className='text-xl'>
                 {props.Title}
@@ -43,7 +43,7 @@ const Cardimg = (props) => {
         <div class="tweet-text">
            {props.Sub}
         </div>
-        
+        </a>
     </div>
   )
 }

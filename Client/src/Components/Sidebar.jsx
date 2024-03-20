@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import useUserstore from "../Store/userstore";
-const Sidebar = () => {
+const Sidebar = (Props) => {
     const {Address,
     Name,
     Email,
@@ -13,6 +14,22 @@ const Sidebar = () => {
     Type: state.Type,
         })
     )
+    console.log(Props)
+    const {Contract} = Props.State;
+    const {Account} = Props;
+    useEffect( async ()=>{
+          try{
+            const user = await Contract.users(Account)
+            console.log(user);
+          }
+          catch(err)
+          {
+            
+            console.log(err);
+          }
+
+         },[])
+
     const navigation = [
         {
             href: '',
@@ -68,7 +85,8 @@ const Sidebar = () => {
                 <div className="flex flex-col h-full">
                     <div className='h-20 flex items-center px-8'>
                         <a href='' className='flex-none'>
-                            <img src="https://floatui.com/logo.svg" width={140} className="mx-auto" />
+                            <h2 className="text-5xl	">skoop</h2>
+                            
                         </a>
                     </div>
                     <div className="flex-1 flex flex-col h-full overflow-auto">
