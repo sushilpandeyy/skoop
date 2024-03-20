@@ -13,6 +13,7 @@ const News = () => {
     Contract:null
   })
   const [acoount, setAccount] = useState('not connected');
+  const [Dupli, setdupli] =useState([]);
   const [newss,setnewss] = useState({});
   const [reporter,setReporter] = useState({name:'',email:'',phone:''});
   useEffect(()=>{
@@ -49,6 +50,7 @@ const News = () => {
       setState({ provider, signer, Contract: contract }); // Update the state with the contract instance
     
       const NewsList = await contract.getLatestNews();
+      setdupli(NewsList);
       const ab = {NewsList}
       setnewss(ab);
       }
@@ -61,20 +63,19 @@ const News = () => {
     }
     template();
   },[])
-  const re = () => {
-    len=len-1;
-  }
+  len=Dupli.length;
   function cards(item){
+    
     return(
       <>
       <Cardimg
-        Key={len--}
+        Len={len--}
         Title={item[0]}
         Sub={item[2]}
         Name={item[3]}
         Url={item[4]}
       />
-      {re}
+      
       </>
       
     )

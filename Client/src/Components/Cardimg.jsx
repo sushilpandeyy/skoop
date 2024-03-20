@@ -25,7 +25,7 @@ const Cardtxt = (props) => {
 const Cardimg = (props) => {
   return (
     <div class="tweet-container">
-        <a href={"/t/"+props.Len}>
+        <a href={"news/t/"+props.Len}>
         <div class="summary">
             <h2 className='text-xl'>
                 {props.Title}
