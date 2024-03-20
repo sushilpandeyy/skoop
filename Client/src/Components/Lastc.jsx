@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 const Lastc = () => {
   return (
    <div className="lastcc kk">
-        <div className="lasth">
+        <div className="lasth ">
          A community-owned journalism network based on transparency and trust.
          </div>
-      <div className="lastte">
+      <div className="lastte ">
            Skoop is home to a growing number of independent newsrooms from around the world. Our cooperative model allows journalists to capture more of the value they create, in a community that prioritizes ethical journalism above all.
       </div>
       <div className="lastbt">
