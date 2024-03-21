@@ -66,6 +66,7 @@ const News = () => {
   len=Dupli.length-1;
   
   function cards(item){
+  
     
     return(
       <>
@@ -75,6 +76,8 @@ const News = () => {
         Sub={item[2]}
         Name={item[3]}
         Url={item[4]}
+        ReporterAddress={item[6]}
+        state = {state}
       />
       
       </>

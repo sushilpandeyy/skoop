@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import useUserstore from "../Store/userstore";
 const Sidebar = (Props) => {
     const {Address,
@@ -14,21 +14,20 @@ const Sidebar = (Props) => {
     Type: state.Type,
         })
     )
-    console.log(Props)
+    const [User, setUser] = useState(Name);
     const {Contract} = Props.State;
     const {Account} = Props;
-    useEffect( async ()=>{
-          try{
-            const user = await Contract.users(Account)
-            console.log(user);
-          }
-          catch(err)
-          {
-            
-            console.log(err);
-          }
-
-         },[])
+    
+    useEffect(() => {
+        const template = async () => {
+            const user = await Contract.users(Account);
+            setUser(user.name);
+           
+        }
+        template();
+    },[Account,Contract]);
+    
+    
 
     const navigation = [
         {
@@ -137,12 +136,12 @@ const Sidebar = (Props) => {
                                 <div className="flex items-center gap-x-4">
                                     <img src={Img || "https://randomuser.me/api/portraits/women/79.jpg"} className="w-12 h-12 rounded-full" />
                                     <div>
-                                        <span className="block text-gray-700 text-sm font-semibold">{Name || "Swati"}</span>
+                                        <span className="block text-gray-700 text-sm font-semibold">{User}</span>
                                         <a
                                             href=""
                                             className="block mt-px text-gray-600 hover:text-indigo-600 text-xs"
                                         >
-                                            {Address || "Login"}
+                                            {Account}
                                         </a>
                                     </div>
                                 </div>
