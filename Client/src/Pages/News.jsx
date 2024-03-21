@@ -4,6 +4,7 @@ import {Cardtxt, Cardimg} from '../Components/Cardimg.jsx'
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import abi from '../abi/News.json';
+import Loading from '../Components/Loading.jsx';
 
 const News = () => {
   let len=0;
@@ -117,7 +118,7 @@ const s = () => {
         />
         </div>
         <div className="sec2 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
-          {(newss.NewsList)?newss.NewsList.slice().reverse().map(cards):"Loading"}
+          {(newss.NewsList)?newss.NewsList.slice().reverse().map(cards):<Loading/>}
         </div>
     </div>
   )
