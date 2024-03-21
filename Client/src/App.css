@@ -23,6 +23,10 @@
     height: 100vh;
     overflow: hidden;
   }
+  .rr{
+    text-wrap: wrap;
+    font-size: 10px;
+  }
   .profile{
     color: #ffffffa0;
   }
