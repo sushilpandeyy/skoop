@@ -221,12 +221,13 @@
     margin: 0 auto;
   }
   .ter h1{
-    font-size: 30px;
-
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
   }
   .ter img{
-    width: 400px;
-    height: 100px;
+    width: 60%;
+    height: 350px;
   }
   .ter h2{
     font-size: 25px;
@@ -307,6 +308,10 @@
 }
 .navee{
     background-color: #15202b;
+    
+}
+.jk{
+    color: white;
 }
 .tweet-text {
     margin-bottom: 20px;
