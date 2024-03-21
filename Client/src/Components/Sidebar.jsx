@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import useUserstore from "../Store/userstore";
+import {Link} from "react-router-dom"
 const Sidebar = (Props) => {
     const {Address,
     Name,
@@ -115,6 +116,12 @@ const Sidebar = (Props) => {
                             }
                         </ul>
                         <div>
+                            <div className="der w-full flex justify-center items-center">
+                            <button class="button-random">
+                             <span >Become Reporter</span>
+                            </button>
+                            </div>
+                        
                             <ul className="px-4 pb-4 text-sm font-medium">
                                 {
                                     navsFooter.map((item, idx) => (
