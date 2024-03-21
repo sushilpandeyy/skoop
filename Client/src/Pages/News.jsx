@@ -72,7 +72,7 @@ const News = () => {
     template();
   },[])
   len=Dupli.length-1;
-  
+  console.log(len);
   function cards(item){
     if(id){
   if(item[3]==id){  
@@ -91,6 +91,9 @@ const News = () => {
       </>
       
     )
+  }
+  else{
+    len--
   }
 }
 else{

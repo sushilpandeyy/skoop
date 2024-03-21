@@ -38,7 +38,7 @@ const Cardimg = (props) => {
    
   return (
     <div class="tweet-container">
-        <a href={"news/t/"+props.Len}>
+        <Link to={"/news/t/"+props.Len}>
         <div class="summary">
             <h2 className='text-xl'>
                 {props.Title}
@@ -57,7 +57,7 @@ const Cardimg = (props) => {
         <div class="tweet-text">
            {props.Sub}
         </div>
-        </a>
+        </Link>
 
     </div>
   )
