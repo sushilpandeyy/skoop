@@ -85,6 +85,7 @@ const News = () => {
         Name={item[3]}
         Url={item[4]}
         ReporterAddress={item[6]}
+        N={false}
         state = {state}
       />
       
@@ -106,6 +107,7 @@ else{
       Name={item[3]}
       Url={item[4]}
       ReporterAddress={item[6]}
+      N={true}
       state = {state}
     />
     
