@@ -5,8 +5,12 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import abi from '../abi/News.json';
 import Loading from '../Components/Loading.jsx';
+import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 
 const News = () => {
+  const { id } = useParams();
   let len=0;
   const [state, setState] = useState({
     provider:null,
@@ -17,6 +21,9 @@ const News = () => {
   const [Dupli, setdupli] =useState([]);
   const [newss,setnewss] = useState({});
   const [reporter,setReporter] = useState({name:'',email:'',phone:''});
+  const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const selectedCategory = queryParams.get('select');
   useEffect(()=>{
     const template = async () => {
        const contractAddress = "0xc3cCab5689A162D1c4C35bBCd15B56E7Ccab7A85";
@@ -67,8 +74,8 @@ const News = () => {
   len=Dupli.length-1;
   
   function cards(item){
-  
-    
+    if(id){
+  if(item[3]==id){  
     return(
       <>
       <Cardimg
@@ -85,6 +92,25 @@ const News = () => {
       
     )
   }
+}
+else{
+  return(
+    <>
+    <Cardimg
+      Len={len--}
+      Title={item[0]}
+      Sub={item[2]}
+      Name={item[3]}
+      Url={item[4]}
+      ReporterAddress={item[6]}
+      state = {state}
+    />
+    
+    </>
+  )
+}
+}
+
 
 const s = () => {
   return (
@@ -118,7 +144,7 @@ const s = () => {
         />
         </div>
         <div className="sec2 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
-          {(newss.NewsList)?newss.NewsList.slice().reverse().map(cards):<Loading/>}
+          {(newss.NewsList)?newss.NewsList.slice().reverse().map(cards):<center><Loading/></center>}
         </div>
     </div>
   )
