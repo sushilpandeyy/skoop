@@ -66,7 +66,7 @@ const Sidebar = (Props) => {
         },
     ]
 
-   // const navsFooter = [
+    const navsFooter = [
    //     {
    //         href: '',
    //         name: 'Settings',
@@ -84,7 +84,7 @@ const Sidebar = (Props) => {
    //         </svg>
    //         ,
    //     }
-   // ]
+   ]
 
     return (
         <>

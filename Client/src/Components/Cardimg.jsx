@@ -52,7 +52,7 @@ const Cardimg = (props) => {
            {props.Sub}
         </div>
         </a>
-        <button onClick={follow}>Follow Reporter</button>
+
     </div>
   )
 }
