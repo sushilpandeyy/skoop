@@ -135,14 +135,14 @@ const Sidebar = (Props) => {
                                     ))
                                 }
                             </ul>
-                            <div className="py-4 px-4 border-t">
+                            <div className="px-4 border-t">
                                 <div className="flex items-center gap-x-4 ">
                                     <img src={Img || "https://randomuser.me/api/portraits/women/79.jpg"} className="w-12 h-12 rounded-full" />
                                     <div>
                                         <span className="block text-gray-700 text-sm font-semibold jk">{User}</span>
                                         <a
                                             href=""
-                                            className="block mt-px text-gray-600 hover:text-indigo-600 text-xs jk"
+                                            className="block mt-px text-gray-600 hover:text-indigo-600 text-xs jk rr"
                                         >
                                             {Account}
                                         </a>
