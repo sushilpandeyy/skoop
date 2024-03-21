@@ -45,9 +45,41 @@ npm run dev
 #### Smart Contract (Blockchain) ⚙️
 No need to redeploy as the contracts are already deployed on the Sepolia testnet.
 
+# Fake News Detector Model
+
+This repository contains a machine learning model for detecting fake news. The model is designed to assess the quality of news articles before they are deployed on a blockchain platform.
+
+## Model Files
+
+Due to the large size of the model file, it's hosted on OneDrive. You can download the model from the following link:
+
+[Click here to access the Fake News Detector model](https://drive.google.com/drive/folders/1OAJMFrJ2_JXa96CB7ZfWDOHpzdHq867C?usp=sharing)
+
+## Dependencies
+
+To use the model, you'll need to install the following dependencies:
+
+- PyTorch
+- TensorFlow
+- NumPy
+- Pandas
+- Transformers
+
+You can install them using pip:
+
+```bash
+pip install torch tensorflow numpy pandas transformers
+```
+
+## Usage
+
+After installing the dependencies, you can use the provided sample code to load and utilize the model for fake news detection.
+
+
+
 ### Accessing the Platform 🚀
 
-- Once the contracts are deployed and the frontend server is running, open your browser and navigate to the URL where the frontend is hosted (usually `http://localhost:3000`).
+- Once the contracts are deployed and the frontend server is running, open your browser and navigate to the URL where the frontend is hosted (usually `http://localhost:5173`).
 - Connect your Metamask wallet to the Sepolia testnet.
 - Use the platform to access news articles. Note that adding as a user might require spending some test Ether.
 
