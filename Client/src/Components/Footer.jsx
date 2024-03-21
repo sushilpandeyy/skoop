@@ -28,7 +28,11 @@ const Footer = () => {
                 <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                     <div className="justify-between sm:flex">
                         <div className="space-y-6 mx-auto">
-                            <img src="https://www.floatui.com/logo.svg" className="w-32 mx-auto" />
+                        <div className='h-20 flex items-center text-center justify-center'>
+                        <a href='' className='flex-none'>
+                            <h2 className="text-5xl profile	">Skoop</h2> 
+                        </a>
+                    </div>
                             <p className="max-w-md">
                             Dectralizing News With Public For Public
                             </p>

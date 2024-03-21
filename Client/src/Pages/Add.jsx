@@ -100,8 +100,7 @@ const Add = () => {
     <main className="w-full h-screen flex flex-col items-center justify-center px-4 k">
       <div className="max-w-sm w-full text-gray-600 space-y-8">
         <div className="text-center">
-          <img src="https://floatui.com/logo.svg" width={150} className="mx-auto" alt="Logo" />
-          <div className="space-y-2">
+          <div className="space-y-3">
             <h3 className="text-white text-xl font-bold sm:text-3xl">Add News</h3>
           </div>
         </div>

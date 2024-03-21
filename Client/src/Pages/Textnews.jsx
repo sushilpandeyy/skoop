@@ -49,9 +49,6 @@ const Textnews = () => {
         signer
       );
 
-
-     
-    
       setState({ provider, signer, Contract: contract }); 
      const newswithid =  contract.newsList(id);
     newswithid.then((result)=>{
@@ -80,6 +77,7 @@ const Textnews = () => {
     <h2>{newsid['result']['category']}</h2> 
     <h3>{newsid['result']['summary']}</h3> 
     <h3>{newsid['result']['description']}</h3> 
+    <img src='{newsid["result"]["imgUrl"]}'/>
 
     </div>
   )
