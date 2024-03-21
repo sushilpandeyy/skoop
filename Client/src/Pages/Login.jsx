@@ -104,7 +104,7 @@ const Login = () => {
           <main className="w-full h-screen flex flex-col items-center justify-center bg-gray-50 sm:px-4 dark">
               <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
                   <div className="text-center">
-                      <img src="https://floatui.com/logo.svg" width={150} className="mx-auto" />
+                      <img src="https://res.cloudinary.com/djug8zfu7/image/upload/v1710962200/zng2ogv0tnab6mnoqtit.png" width={150} className="mx-auto" />
                       <div className="mt-5 space-y-2">
                           <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Create an account</h3>
                           {/* <p className="">Already have an account? <a href="javascript:void(0)" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</a></p> */}

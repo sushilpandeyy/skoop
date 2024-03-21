@@ -71,6 +71,7 @@ const Textnews = () => {
     }
     template();
   },[])
+  
 
   return (
 
