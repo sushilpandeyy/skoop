@@ -227,13 +227,19 @@
   }
   .ter img{
     width: 60%;
-    height: 350px;
+    height: 400px;
   }
   .ter h2{
     font-size: 25px;
   }
   .ter h3{
     font-size: 20px;
+    color: #cacaca;
+
+  }
+  .ter h4{
+    font-size: 17px;
+    color: #cacaca;
   }
   .lastte{
     width: 50%;
