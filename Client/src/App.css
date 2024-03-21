@@ -114,6 +114,10 @@
     transition: opacity 0.5s;
     opacity: 0;
   }
+  .po{
+    position: fixed;
+    overflow: hidden;
+  }
 
   .secondary-button-random {
     background-color: transparent;
