@@ -112,7 +112,7 @@ const Login = () => {
       }
   return (
     
-          <main className="w-full h-screen flex flex-col items-center justify-center bg-gray-50 sm:px-4 dark">
+          <main className="w-full h-screen flex flex-col items-center justify-center bg-gray-50 sm:px-4 dark po">
               <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
                   <div className="text-center">
                       <img src="https://res.cloudinary.com/djug8zfu7/image/upload/v1710962200/zng2ogv0tnab6mnoqtit.png" width={150} className="mx-auto" />
