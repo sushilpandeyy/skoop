@@ -21,6 +21,7 @@ const router= createBrowserRouter(
     <Route path='/' element={<App/>}>
       <Route path='' element={<Homepage/>}/>
       <Route path='news' element={<News/>}/>
+      <Route path='news/:id' element={<News/>}/>
       <Route path='news/t/:id' element={<Textnews/>}/>
       <Route path='news/v/:id' element={<Videonews/>}/>
       <Route path='login' element={<Login/>}/>
