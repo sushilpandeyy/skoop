@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 const Cardtxt = (props) => {
+
     return (
       <div class="tweet-container1">
           <div class="summary1">
@@ -18,11 +19,18 @@ const Cardtxt = (props) => {
           <div class="tweet-text1">
               {props.Sub}
           </div>
+          
       </div>
     )
   }
 
 const Cardimg = (props) => {
+    const contract = props.state.Contract;
+    const follow = async () => {      
+        
+        const follow = await contract.followReporter(props.ReporterAddress);
+        console.log(follow);
+    }
   return (
     <div class="tweet-container">
         <a href={"news/t/"+props.Len}>
@@ -33,7 +41,7 @@ const Cardimg = (props) => {
         </div>
         <div class="tweet-header">
             <div class="user-info">
-                <div class="user-name">By: {props.Name}</div>
+                <div class="user-name">Category: {props.Name}</div>
             </div>
         </div>
         
@@ -44,6 +52,7 @@ const Cardimg = (props) => {
            {props.Sub}
         </div>
         </a>
+        <button onClick={follow}>Follow Reporter</button>
     </div>
   )
 }
