@@ -68,7 +68,7 @@ const Textnews = () => {
     }
     template();
   },[])
-
+  
   return (
 
     <div className='ter'>

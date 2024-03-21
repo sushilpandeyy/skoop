@@ -104,6 +104,7 @@ const Login = () => {
           <main className="w-full h-screen flex flex-col items-center justify-center bg-gray-50 sm:px-4 dark">
               <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
                   <div className="text-center">
+                      <img src="https://res.cloudinary.com/djug8zfu7/image/upload/v1710962200/zng2ogv0tnab6mnoqtit.png" width={150} className="mx-auto" />
                   <div className='h-20 flex items-center justify-center'>
                         <a href='' className='flex-none'>
                             <h2 className="text-5xl profile	">Skoop</h2>
