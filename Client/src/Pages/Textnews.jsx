@@ -52,9 +52,7 @@ const Textnews = () => {
 
      
     
-      setState({ provider, signer, Contract: contract }); // Update the state with the contract instance
-      
-     //NewsList is the news array
+      setState({ provider, signer, Contract: contract }); 
      const newswithid =  contract.newsList(id);
     newswithid.then((result)=>{
       const ab = {result}
@@ -70,23 +68,17 @@ const Textnews = () => {
         
         console.log(err);
       }
-
-
     }
     template();
   },[])
   
-    
-    
   return (
-    <div>
-      {id} <h1>Title:</h1> {newsid['result']['title']}
-    <h1>Cotegory:</h1> {newsid['result']['category']}
-    <h1>Summary:</h1> {newsid['result']['summary']}
-    <h1>Description:</h1> {newsid['result']['description']}
-    <h1>Img:</h1> {newsid['result']['imgUrl']}
-
-
+    <div className='ter'>
+    <h1>{newsid['result']['title']}</h1> 
+    <h2>{newsid['result']['category']}</h2> 
+    <h3>{newsid['result']['summary']}</h3> 
+    <h1>{newsid['result']['description']}</h1> 
+    <img img='{newsid["result"]["imgUrl"]}'/>
 
     </div>
   )
