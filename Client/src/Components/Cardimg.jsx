@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 const Cardtxt = (props) => {
@@ -26,11 +27,15 @@ const Cardtxt = (props) => {
 
 const Cardimg = (props) => {
     const contract = props.state.Contract;
-    const follow = async () => {      
-        
-        const follow = await contract.followReporter(props.ReporterAddress);
-        console.log(follow);
-    }
+    const [reporterinfo, setreporterinfo] = useState('');
+    useEffect(() => {
+        const template = async () => {
+            const reporter = await contract.getReporterInfo(props.ReporterAddress);
+            setreporterinfo(reporter.name);           
+        }
+        template();
+    },[props]);
+   
   return (
     <div class="tweet-container">
         <a href={"news/t/"+props.Len}>
@@ -43,6 +48,7 @@ const Cardimg = (props) => {
             <div class="user-info">
                 <div class="user-name">Category: {props.Name}</div>
             </div>
+            <div class="user-name">By: {reporterinfo}</div>
         </div>
         
         <div class="tweet-image">
@@ -86,6 +92,6 @@ const Cardvid = (props) => {
   )
 }
 
-export default Cardvid
+
 
 export {Cardimg, Cardtxt,Cardvid}

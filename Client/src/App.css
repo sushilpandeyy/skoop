@@ -7,13 +7,14 @@
     background-color:#15202b;
   }
   body::-webkit-scrollbar {
-    
         width: 0;
-    
   }
   body {
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+  .we{
+    width: 75vh;
   }
   .xx{
     z-index: -99;
@@ -221,18 +222,25 @@
     margin: 0 auto;
   }
   .ter h1{
-    font-size: 30px;
-
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
   }
   .ter img{
-    width: 400px;
-    height: 100px;
+    width: 60%;
+    height: 400px;
   }
   .ter h2{
     font-size: 25px;
   }
   .ter h3{
     font-size: 20px;
+    color: #cacaca;
+
+  }
+  .ter h4{
+    font-size: 17px;
+    color: #cacaca;
   }
   .lastte{
     width: 50%;
@@ -307,6 +315,10 @@
 }
 .navee{
     background-color: #15202b;
+    
+}
+.jk{
+    color: white;
 }
 .tweet-text {
     margin-bottom: 20px;
