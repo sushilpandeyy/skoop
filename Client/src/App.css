@@ -200,6 +200,26 @@
       /* font-family: sans-serif; */
 
   }
+  .ter{
+    width: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+  }
+  .ter h1{
+    font-size: 30px;
+
+  }
+  .ter h2{
+    font-size: 25px;
+  }
+  .ter h3{
+    font-size: 20px;
+  }
   .lastte{
     width: 50%;
     color: rgb(155, 155, 155);
