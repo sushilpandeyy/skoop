@@ -71,15 +71,15 @@ const Textnews = () => {
     }
     template();
   },[])
-  
+
   return (
 
     <div className='ter'>
     <h1>{newsid['result']['title']}</h1> 
+    <img src={newsid["result"]["imgUrl"]}/>
     <h2>{newsid['result']['category']}</h2> 
     <h3>{newsid['result']['summary']}</h3> 
     <h3>{newsid['result']['description']}</h3> 
-    <img src='{newsid["result"]["imgUrl"]}'/>
 
     </div>
   )
