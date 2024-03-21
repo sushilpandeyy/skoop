@@ -64,6 +64,7 @@ const News = () => {
     template();
   },[])
   len=Dupli.length-1;
+  
   function cards(item){
     
     return(
@@ -113,7 +114,7 @@ const s = () => {
         />
         </div>
         <div className="sec2 fixed top-0 left-0 w-auto h-full  bg-white space-y-8">
-          {(newss.NewsList)?newss.NewsList.map(cards):"Loading"}
+          {(newss.NewsList)?newss.NewsList.slice().reverse().map(cards):"Loading"}
         </div>
     </div>
   )

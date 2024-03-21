@@ -73,12 +73,13 @@ const Textnews = () => {
   },[])
   
   return (
+
     <div className='ter'>
     <h1>{newsid['result']['title']}</h1> 
     <h2>{newsid['result']['category']}</h2> 
     <h3>{newsid['result']['summary']}</h3> 
-    <h1>{newsid['result']['description']}</h1> 
-    <img img='{newsid["result"]["imgUrl"]}'/>
+    <h3>{newsid['result']['description']}</h3> 
+    <img src='{newsid["result"]["imgUrl"]}'/>
 
     </div>
   )
