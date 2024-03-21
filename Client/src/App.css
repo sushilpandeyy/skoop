@@ -7,13 +7,14 @@
     background-color:#15202b;
   }
   body::-webkit-scrollbar {
-    
         width: 0;
-    
   }
   body {
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+  .we{
+    width: 75vh;
   }
   .xx{
     z-index: -99;
