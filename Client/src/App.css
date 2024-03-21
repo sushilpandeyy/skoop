@@ -5,14 +5,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200&display=swap');
   body{
     background-color:#15202b;
+    overflow-x: hidden;
   }
   body::-webkit-scrollbar {
         width: 0;
   }
-  body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+  
   .we{
     width: 75vh;
   }
@@ -154,6 +152,21 @@
     background-image: url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&w=2048&q=75"), url("https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&w=1080&q=75");
     background-repeat: no-repeat;
     background-position: left,right;
+  }
+  .tert ul{
+    display: flex;
+   height: 100%;
+   align-items: center;
+  }
+  .tert ul li{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:10px ;
+  }
+  .navv{
+    justify-content: space-between;
   }
   .k{
     background-color: rgb(7 10 15 / 1);
