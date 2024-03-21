@@ -57,4 +57,35 @@ const Cardimg = (props) => {
   )
 }
 
-export {Cardimg, Cardtxt}
+
+const Cardvid = (props) => {
+  return (
+    <div class="tweet-container">
+        <a href={"news/t/"+props.Len}>
+        <div class="summary">
+            <h2 className='text-xl'>
+                {props.Title}
+            </h2>
+        </div>
+        <div class="tweet-header">
+            <div class="user-info">
+                <div class="user-name">By: {props.Name}</div>
+            </div>
+        </div>
+        
+        <div class="tweet-image">
+        <video controls>
+        <source src={props.Url} type="video/mp4" />
+      </video>
+        </div>
+        <div class="tweet-text">
+           {props.Sub}
+        </div>
+        </a>
+    </div>
+  )
+}
+
+export default Cardvid
+
+export {Cardimg, Cardtxt,Cardvid}
